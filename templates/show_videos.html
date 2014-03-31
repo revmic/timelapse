@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=videos>
+  {% for video in videos %}
+    <li><h2>{{ video.title }}</h2>{{ video.filename|safe }}
+  {% else %}
+    <li><em>Unbelievable.  No videos here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
