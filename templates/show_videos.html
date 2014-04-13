@@ -1,10 +1,18 @@
 {% extends "layout.html" %}
 {% block body %}
+<video width="320" height="240" controls>
+  <source src="/vids/hour/2014023010.avi" type="video/mp4">
+</video>
+<!--
   <ul class=videos>
   {% for video in videos %}
-    <li><h2>{{ video.title }}</h2>{{ video.filename|safe }}
+  <p>{{video.fullpath}}</p>
+  <video width="320" height="240" controls>
+    <source src='/vids/{{ video.filename }}' type="video/avi">
+  </video>
   {% else %}
-    <li><em>Unbelievable.  No videos here so far</em>
+    <li><em>Hmm.. Looks like something bad happened.</em>
   {% endfor %}
   </ul>
+-->
 {% endblock %}

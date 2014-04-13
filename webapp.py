@@ -49,7 +49,7 @@ def close_db(error):
 @app.route('/')
 def show_videos():
     db = get_db()
-    cur = db.execute('select title, filename from tl_videos order by id desc')
+    cur = db.execute('select title, fullpath, filename from tl_videos order by id desc')
     videos = cur.fetchall()
     return render_template('show_videos.html', videos=videos)
 

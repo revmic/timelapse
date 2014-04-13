@@ -77,8 +77,8 @@ fi
 
 ## Encode it ##
 echo "Encoding video ..."
-mencoder -nosound -mf fps=$fps -o $destination/$datetime.avi -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=8000 mf://@imglist.txt
+mencoder -nosound -mf fps=$fps -o $destination/${datetime}_x264.avi -ovc x264 -x264encopts bitrate=6000 mf://@imglist.txt
 # TODO - Get mencoder's return value
-rm imglist.txt
+#rm imglist.txt
 
 exit 0
